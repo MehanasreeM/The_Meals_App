@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 
 import MealList from '../components/MealList';
 const CategoryMealsScreen = props =>{
-    const catId = props.route.params.categoryId;
-  
-    const availableMeals = useSelector(state => state.meals.filteredMeals);
+    const catId = props.route.params.categoryId; //getting the parameter from CategoriesScreen
+
+    //useSelector return the current state element
+    const availableMeals = useSelector(state => state.meals.filteredMeals); 
 
     const displayedMeals = availableMeals.filter (meal => meal.categoryIds.indexOf(catId) >=0);
 
@@ -17,7 +18,7 @@ const CategoryMealsScreen = props =>{
          </View>
       );
     };
-    
+
     return (
       <MealList 
         listData = {displayedMeals}

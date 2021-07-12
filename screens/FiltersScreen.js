@@ -30,6 +30,8 @@ const FilterSwitch = props => {
 
 
 const FiltersScreen = props =>{
+
+    //default navigation options
     props.navigation.setOptions ({
         headerRight : () => (
             <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
@@ -43,7 +45,8 @@ const FiltersScreen = props =>{
     const dispatch = useDispatch();
    
     const {navigation} = props;
-
+ 
+    //adding four different filters
     const [isGlutenFree,setIsGlutenFree] = useState(false);
     const [isLactoseFree,setIsLactoseFree] = useState(false);
     const [isVegan,setIsVegan] = useState(false);
@@ -56,7 +59,7 @@ const FiltersScreen = props =>{
             vegan : isVegan,
             vegetarian : isVegetarian,
         };
-        dispatch(setFilters(appliedFilters));
+        dispatch(setFilters(appliedFilters));//passing values to reducers
     };
 
   /* useEffect(() =>{

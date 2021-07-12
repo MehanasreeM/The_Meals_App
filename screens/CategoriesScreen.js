@@ -4,6 +4,7 @@ import { View,Text,StyleSheet,FlatList,TouchableOpacity} from 'react-native';
 import { CATEGORIES } from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
 
+//screen to display Meal Categories
 const CategoriesScreen = props =>{
     const renderGridItem = (itemData)=>{
        return(

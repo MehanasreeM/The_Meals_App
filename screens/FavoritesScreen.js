@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import MealItem from '../components/MealItem';
 import DefaultText from '../components/DefaultText';
 
-
+//adding values to favorite screen
 const FavoritesScreen = props =>{
 
   

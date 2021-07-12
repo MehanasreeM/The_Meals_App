@@ -23,10 +23,10 @@ const MealDetailScreen = props =>{
     const dispatch = useDispatch();
     const toggleFavoriteHandler =  () => {
        // console.log(mealId);
-        dispatch(toggleFavorite(mealId));
+        dispatch(toggleFavorite(mealId));//passing values to reducers
     };
 
-    
+    //default navigation options
     props.navigation.setOptions({
         headerRight : () =>(
             <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>

@@ -13,10 +13,11 @@ enableScreens();
 
 const rootReducer = combineReducers ({
   meals : mealsReducer,
-});
+}); //combining all the readucers we created
 
 const store = createStore(rootReducer);
 
+//fetching the fonts from different folder
 const fetchFonts = () => {
   return Font.loadAsync({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
@@ -38,8 +39,9 @@ export default function App() {
   }
 
   return (
+    //using our navigator
    <Provider store = {store} >
-    <MealsNavigator />
+    <MealsNavigator /> 
     </Provider>
   );
 }

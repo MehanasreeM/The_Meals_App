@@ -17,9 +17,10 @@ import { Platform , StyleSheet,Text} from 'react-native';
 import { CATEGORIES , MEALS} from '../data/dummy-data';
 import CustomHeaderButton from '../components/HeaderButton';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator();//creating a stack navigator
 
 const StackNavigator = () => (
+  //common options for screens within a stack
     <Stack.Navigator
        screenOptions = {{
         headerStyle : {
@@ -103,8 +104,10 @@ const FavNavigator = ()=>(
 );
 
 
-const Tab = createBottomTabNavigator();
-const Mtab = createMaterialBottomTabNavigator();
+const Tab = createBottomTabNavigator();//tab navigator
+const Mtab = createMaterialBottomTabNavigator();//material tab navigator
+
+//adding different options for android and ios
 const TabNavigator =Platform.OS==='android' ? () =>(
   <Mtab.Navigator 
     activeColor = 'white'
@@ -191,7 +194,7 @@ const FilterNavigator = () => (
   </FilterStack.Navigator>
 );
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();//Drawer Navigator
 const DrawerNavigator = () => (
   <Drawer.Navigator
     drawerContentOptions = {{
